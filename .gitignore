@@ -1,0 +1,65 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and local Python tooling
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Jupyter/IPython
+.ipynb_checkpoints/
+
+# Editor, OS, and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Project temporary experiment snapshots and logs
+.tmp/
+exp_scripts/nohup_logs/*
+!exp_scripts/nohup_logs/.gitkeep
+
+# Generated experiment outputs
+exp_scripts/results/*
+!exp_scripts/results/.gitkeep
+
+# Model artifacts and ML run outputs
+*.ckpt
+*.pt
+*.pth
+*.onnx
+runs/
+wandb/
+lightning_logs/
+tensorboard/
+
+# Large local datasets generated or unpacked by the README workflow
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/raw.tar.gz
+
+data/processed/*
+!data/processed/.gitkeep
+
+# Local archives and extracted data dumps
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+!data/raw/raw.tar.gz
