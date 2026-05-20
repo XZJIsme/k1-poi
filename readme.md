@@ -1,6 +1,6 @@
 # K1-POI
 
-The official implementation of K1-POI.
+The official implementation of K1-POI for the KDD 2026 paper **Is the Last Check-In All You Need? Next POI Recommendation: Recall and Rerank**.
 
 ## Quick Start
 
@@ -12,11 +12,12 @@ conda activate next-poi
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 ```
 
-This step is flexible. You can install PyTorch with a different CUDA version.
+This step is flexible. You can install different versions of Python and PyTorch using other environment management tools.
 
 Clone the repository and use `k1-poi` as the working directory:
 
 ```bash
+git clone https://github.com/XZJIsme/k1-poi.git
 cd k1-poi
 tar -xzf data/raw/raw.tar.gz -C data/raw
 python data/data_process.py
@@ -58,7 +59,7 @@ nohup python -u exp_scripts/run_st_prior_reranker_hparam_search_parallel_trials.
   > exp_scripts/nohup_logs/st_prior_reranker_hparam_search_parallel_trials_$(date +%Y%m%d_%H%M%S).log 2>&1 &
 ```
 
-Run only on NYC on GPU 0:
+Run on NYC only using GPU 0:
 
 ```bash
 mkdir -p exp_scripts/nohup_logs
