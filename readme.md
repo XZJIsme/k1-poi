@@ -6,7 +6,7 @@ The official implementation of K1-POI for the KDD 2026 paper **Is the Last Check
 
 To set up the environment, run the following commands:
 
-```bash
+```
 conda create -n next-poi python=3.12 -y
 conda activate next-poi
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
@@ -16,7 +16,7 @@ This step is flexible. You can install different versions of Python and PyTorch 
 
 Clone the repository and use `k1-poi` as the working directory:
 
-```bash
+```
 git clone https://github.com/XZJIsme/k1-poi.git
 cd k1-poi
 tar -xzf data/raw/raw.tar.gz -C data/raw
@@ -37,7 +37,7 @@ The script will produce a markdown file in `exp_scripts/results/`. The markdown 
 
 Run on the three datasets together across multiple devices in parallel:
 
-```bash
+```
 mkdir -p exp_scripts/nohup_logs
 nohup python -u exp_scripts/run_st_prior_reranker_hparam_search_parallel_trials.py \
   --data_path_list data/processed/TKY_excluding_cold.pkl \
@@ -61,7 +61,7 @@ nohup python -u exp_scripts/run_st_prior_reranker_hparam_search_parallel_trials.
 
 Run on NYC only using GPU 0:
 
-```bash
+```
 mkdir -p exp_scripts/nohup_logs
 nohup python -u exp_scripts/run_st_prior_reranker_hparam_search_parallel_trials.py \
   --data_path_list data/processed/NYC_excluding_cold.pkl \
@@ -83,7 +83,7 @@ nohup python -u exp_scripts/run_st_prior_reranker_hparam_search_parallel_trials.
 
 An example command to run on the three datasets together across multiple devices in parallel with all CLI parameters explicitly specified:
 
-```bash
+```
 mkdir -p exp_scripts/nohup_logs
 nohup python -u exp_scripts/run_st_prior_reranker_hparam_search_parallel_trials.py \
   --data_path_list data/processed/TKY_excluding_cold.pkl \
